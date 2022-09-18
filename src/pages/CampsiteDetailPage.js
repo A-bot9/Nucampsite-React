@@ -11,7 +11,9 @@ import CampsitesList from '../features/campsites/CampsitesList';
 
 const CampsiteDetailPage = () => {
 	const { campsiteId } = useParams();
+
 	const campsite = useSelector(selectCampsiteById(campsiteId));
+
 	console.log('campsite:', campsite);
 
 	const isLoading = useSelector((state) => state.campsites.isLoading);
